@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D50B8659-C8F5-40DD-9DFE-6AB4034C282B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>payroll</RootNamespace>
+    <AssemblyName>payroll</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CloudToolkitN6, Version=0.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\binaries\CloudToolkitN6.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design">
+      <HintPath>..\..\..\..\..\..\..\..\Windows\Microsoft.NET\Framework\v2.0.50727\System.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Design">
+      <HintPath>..\..\..\..\..\..\..\..\Windows\Microsoft.NET\Framework\v2.0.50727\System.Drawing.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Web">
+      <HintPath>..\..\..\..\..\..\..\..\Windows\Microsoft.NET\Framework\v2.0.50727\System.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BonusFeeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BonusFeeReport.Designer.cs">
+      <DependentUpon>BonusFeeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Admin.cs" />
+    <Compile Include="Class\AttendanceReport.cs" />
+    <Compile Include="Class\Attendances.cs" />
+    <Compile Include="Class\Bonus.cs" />
+    <Compile Include="Class\Loan.cs" />
+    <Compile Include="Class\NoOfLeave.cs" />
+    <Compile Include="Class\Position.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetAttendance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetAttendance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetAttendanceReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetAttendanceReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPayslipEmployee.cs">
+      <DependentUpon>DataSetPayslipEmployee.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EmployeeReportcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeReportcs.Designer.cs">
+      <DependentUpon>EmployeeReportcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAttendanceReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAttendanceReport.Designer.cs">
+      <DependentUpon>FormAttendanceReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttendanceTimeOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttendanceTimeOut.Designer.cs">
+      <DependentUpon>AttendanceTimeOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Counts.cs" />
+    <Compile Include="DataSetPayrollAllIn.cs">
+      <DependentUpon>DataSetPayrollAllIn.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetPayrollAllIn.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPayrollAllIn.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPayslipEmployee.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPayslipEmployee.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Employee.cs" />
+    <Compile Include="Forms\Bonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bonus.Designer.cs">
+      <DependentUpon>Bonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Deduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Deduction.Designer.cs">
+      <DependentUpon>Deduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeeEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeEntry.Designer.cs">
+      <DependentUpon>EmployeeEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeeRegistrationFormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeRegistrationFormAdmin.designer.cs">
+      <DependentUpon>EmployeeRegistrationFormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPayrollReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPayrollReport.Designer.cs">
+      <DependentUpon>FormPayrollReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrintEmployeePayroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrintEmployeePayroll.Designer.cs">
+      <DependentUpon>FormPrintEmployeePayroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormNoOfLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormNoOfLeave.Designer.cs">
+      <DependentUpon>FormNoOfLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormPosition.Designer.cs">
+      <DependentUpon>FormPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GenerateReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GenerateReports.Designer.cs">
+      <DependentUpon>GenerateReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HolidayEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HolidayEntry.Designer.cs">
+      <DependentUpon>HolidayEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LeaveEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LeaveEntry.Designer.cs">
+      <DependentUpon>LeaveEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Loan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Loan.Designer.cs">
+      <DependentUpon>Loan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuApp.Designer.cs">
+      <DependentUpon>MenuApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Out.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Out.Designer.cs">
+      <DependentUpon>Out.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PagIbigEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PagIbigEntry.Designer.cs">
+      <DependentUpon>PagIbigEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PhilhealthEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PhilhealthEntry.Designer.cs">
+      <DependentUpon>PhilhealthEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SSSEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SSSEntry.Designer.cs">
+      <DependentUpon>SSSEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TaxEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TaxEntry.Designer.cs">
+      <DependentUpon>TaxEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViewPayroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewPayroll.Designer.cs">
+      <DependentUpon>FormViewPayroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Holiday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Holiday.Designer.cs">
+      <DependentUpon>Holiday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Holidays.cs" />
+    <Compile Include="Forms\Leave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Leave.Designer.cs">
+      <DependentUpon>Leave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Leaves.cs" />
+    <Compile Include="Forms\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PagIbig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PagIbig.Designer.cs">
+      <DependentUpon>PagIbig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\PagIbigs.cs" />
+    <Compile Include="Forms\Payroll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Payroll.Designer.cs">
+      <DependentUpon>Payroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Payrollsss.cs" />
+    <Compile Include="Class\Philhealth.cs" />
+    <Compile Include="Forms\Philheath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Philheath.Designer.cs">
+      <DependentUpon>Philheath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HolidayReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HolidayReport.Designer.cs">
+      <DependentUpon>HolidayReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveReport.Designer.cs">
+      <DependentUpon>LeaveReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoanReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoanReport.Designer.cs">
+      <DependentUpon>LoanReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PagibigReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PagibigReport.Designer.cs">
+      <DependentUpon>PagibigReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhilhealthReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhilhealthReport.Designer.cs">
+      <DependentUpon>PhilhealthReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\SSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SSS.Designer.cs">
+      <DependentUpon>SSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\SSSS.cs" />
+    <Compile Include="Forms\Tax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tax.Designer.cs">
+      <DependentUpon>Tax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Taxs.cs" />
+    <Compile Include="SSSreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SSSreport.Designer.cs">
+      <DependentUpon>SSSreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaxReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaxReport.Designer.cs">
+      <DependentUpon>TaxReport.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BonusFeeReport.resx">
+      <DependentUpon>BonusFeeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeReportcs.resx">
+      <DependentUpon>EmployeeReportcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAttendanceReport.resx">
+      <DependentUpon>FormAttendanceReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttendanceTimeOut.resx">
+      <DependentUpon>AttendanceTimeOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bonus.resx">
+      <DependentUpon>Bonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Deduction.resx">
+      <DependentUpon>Deduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeeEntry.resx">
+      <DependentUpon>EmployeeEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeeRegistrationFormAdmin.resx">
+      <DependentUpon>EmployeeRegistrationFormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPayrollReport.resx">
+      <DependentUpon>FormPayrollReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrintEmployeePayroll.resx">
+      <DependentUpon>FormPrintEmployeePayroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormNoOfLeave.resx">
+      <DependentUpon>FormNoOfLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormPosition.resx">
+      <DependentUpon>FormPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GenerateReports.resx">
+      <DependentUpon>GenerateReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HolidayEntry.resx">
+      <DependentUpon>HolidayEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LeaveEntry.resx">
+      <DependentUpon>LeaveEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Loan.resx">
+      <DependentUpon>Loan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuApp.resx">
+      <DependentUpon>MenuApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Out.resx">
+      <DependentUpon>Out.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PagIbigEntry.resx">
+      <DependentUpon>PagIbigEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PhilhealthEntry.resx">
+      <DependentUpon>PhilhealthEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SSSEntry.resx">
+      <DependentUpon>SSSEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TaxEntry.resx">
+      <DependentUpon>TaxEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormViewPayroll.resx">
+      <DependentUpon>FormViewPayroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Holiday.resx">
+      <DependentUpon>Holiday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Leave.resx">
+      <DependentUpon>Leave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PagIbig.resx">
+      <DependentUpon>PagIbig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Payroll.resx">
+      <DependentUpon>Payroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Philheath.resx">
+      <DependentUpon>Philheath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HolidayReport.resx">
+      <DependentUpon>HolidayReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveReport.resx">
+      <DependentUpon>LeaveReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoanReport.resx">
+      <DependentUpon>LoanReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagibigReport.resx">
+      <DependentUpon>PagibigReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhilhealthReport.resx">
+      <DependentUpon>PhilhealthReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report10.rdlc" />
+    <EmbeddedResource Include="Report11.rdlc" />
+    <EmbeddedResource Include="Report12.rdlc" />
+    <EmbeddedResource Include="Report13.rdlc" />
+    <EmbeddedResource Include="Report14.rdlc" />
+    <EmbeddedResource Include="Report15.rdlc" />
+    <EmbeddedResource Include="Forms\SSS.resx">
+      <DependentUpon>SSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tax.resx">
+      <DependentUpon>Tax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report16.rdlc" />
+    <EmbeddedResource Include="Report17.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
+    <EmbeddedResource Include="Report6.rdlc" />
+    <EmbeddedResource Include="Report7.rdlc" />
+    <EmbeddedResource Include="Report8.rdlc" />
+    <EmbeddedResource Include="Report9.rdlc" />
+    <EmbeddedResource Include="SSSreport.resx">
+      <DependentUpon>SSSreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaxReport.resx">
+      <DependentUpon>TaxReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet4.xsc">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet4.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet4.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet4.xss">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet5.xsc">
+      <DependentUpon>DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet5.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet5.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet5.xss">
+      <DependentUpon>DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet6.xsc">
+      <DependentUpon>DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet6.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet6.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet6.xss">
+      <DependentUpon>DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet7.xsc">
+      <DependentUpon>DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet7.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet7.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet7.xss">
+      <DependentUpon>DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet8.xsc">
+      <DependentUpon>DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet8.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet8.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet8.xss">
+      <DependentUpon>DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet9.xsc">
+      <DependentUpon>DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet9.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet9.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet9.xss">
+      <DependentUpon>DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetAttendance.xsc">
+      <DependentUpon>DataSetAttendance.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetAttendance.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetAttendance.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetAttendance.xss">
+      <DependentUpon>DataSetAttendance.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetAttendanceReport.xsc">
+      <DependentUpon>DataSetAttendanceReport.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetAttendanceReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetAttendanceReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetAttendanceReport.xss">
+      <DependentUpon>DataSetAttendanceReport.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPayrollAllIn.xsc">
+      <DependentUpon>DataSetPayrollAllIn.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPayrollAllIn.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPayrollAllIn.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPayrollAllIn.xss">
+      <DependentUpon>DataSetPayrollAllIn.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPayslipEmployee.xsc">
+      <DependentUpon>DataSetPayslipEmployee.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPayslipEmployee.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPayslipEmployee.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPayslipEmployee.xss">
+      <DependentUpon>DataSetPayslipEmployee.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ReviewersDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\videos_4_background1.jpg" />
+    <None Include="images\List manager.png" />
+    <Content Include="Resources\01 %2812%29.png" />
+    <Content Include="Resources\100227023905969.png" />
+    <Content Include="Resources\1322905735_user-group-new.png" />
+    <Content Include="Resources\1369568759_Login_out.jpg" />
+    <None Include="Resources\1369568759_Login_out1.jpg" />
+    <Content Include="Resources\1369568782_Item_3D.jpg" />
+    <Content Include="Resources\1369568782_Item_3D.png" />
+    <Content Include="Resources\1369568782_Item_3D1.png" />
+    <Content Include="Resources\1369568871_advancedsettings.png" />
+    <Content Include="Resources\1369569580_kdmconfig.png" />
+    <Content Include="Resources\1369569583_Gnome-Document-Save-64.jpg" />
+    <Content Include="Resources\1369569586_userconfig.jpg" />
+    <Content Include="Resources\1369569754_system-windows.jpg" />
+    <Content Include="Resources\1369569761_home.jpg" />
+    <Content Include="Resources\1369569761_home1.jpg" />
+    <Content Include="Resources\1369569761__refresh.png" />
+    <Content Include="Resources\1369569761__refresh1.png" />
+    <Content Include="Resources\1369569776_System.jpg" />
+    <Content Include="Resources\1369569776_System.png" />
+    <Content Include="Resources\1369569776_System1.jpg" />
+    <Content Include="Resources\1369571396_edit.png" />
+    <None Include="Resources\15417203-exit-icon1.jpg" />
+    <Content Include="Resources\2487_angel_with_halo_sticker_decal.gif" />
+    <Content Include="Resources\266c44f4d5e4b96af11fed54448b3ed17.jpg" />
+    <Content Include="Resources\4290_1253_128_login manager_icon.png" />
+    <Content Include="Resources\7023408685_c04f2b7b74_o.jpg" />
+    <None Include="Resources\7023408685_c04f2b7b74_o1.jpg" />
+    <Content Include="Resources\About-icon.png" />
+    <Content Include="Resources\Actions-contact-date-icon.png" />
+    <Content Include="Resources\Actions-document-edit-icon.png" />
+    <Content Include="Resources\Actions-document-edit-icon1.png" />
+    <Content Include="Resources\Actions-document-save-all-icon.png" />
+    <Content Include="Resources\Actions-go-home-icon.png" />
+    <Content Include="Resources\Actions-go-jump-today-icon.png" />
+    <Content Include="Resources\Actions-list-add-icon.png" />
+    <Content Include="Resources\Actions-user-group-delete-icon.png" />
+    <Content Include="Resources\add-user-icon.png" />
+    <Content Include="Resources\add-user-icon1.png" />
+    <Content Include="Resources\Add.png" />
+    <Content Include="Resources\adding.png" />
+    <None Include="Resources\adding1.png" />
+    <Content Include="Resources\addressbook-edit-icon.png" />
+    <None Include="Resources\AFREA wordle from 7 cooperative principles.JPG" />
+    <None Include="Resources\AFREA wordle from 7 cooperative principles1.JPG" />
+    <Content Include="Resources\back-icon %281%29.png" />
+    <Content Include="Resources\back-icon.png" />
+    <Content Include="Resources\back-icon1.png" />
+    <Content Include="Resources\bemco.jpg" />
+    <None Include="Resources\bemco1.jpg" />
+    <Content Include="Resources\Bin-Empty-icon.png" />
+    <Content Include="Resources\Blue-Abstract-Wallpaper.jpg" />
+    <Content Include="Resources\Blue.JPG" />
+    <None Include="Resources\Blue1.JPG" />
+    <Content Include="Resources\Button-Delete-icon.png" />
+    <Content Include="Resources\Button-Next-icon %281%29.png" />
+    <Content Include="Resources\Button-Next-icon.png" />
+    <Content Include="Resources\calc.png" />
+    <Content Include="Resources\calcltr.gif" />
+    <Content Include="Resources\calculator-icon.png" />
+    <Content Include="Resources\calculator50.gif" />
+    <Content Include="Resources\calendar logo.png" />
+    <None Include="Resources\calendar_date.ico" />
+    <None Include="Resources\can-stock-photo_csp7086394.jpg" />
+    <Content Include="Resources\cancel.png" />
+    <None Include="Resources\ChangePassword.png" />
+    <None Include="Resources\ChangePassword1.png" />
+    <None Include="Resources\cancel1.png" />
+    <Content Include="Resources\Check-icon.png" />
+    <Content Include="Resources\Check-icon1.png" />
+    <None Include="Resources\clock.ico" />
+    <Content Include="Resources\Close-2-icon.png" />
+    <Content Include="Resources\Close-2-icon1.png" />
+    <None Include="Resources\contact-form-icon.jpg" />
+    <None Include="Resources\Cooperatives-word-graphic.png" />
+    <None Include="Resources\Consumerism-and-Co-operativ-520x198.png" />
+    <None Include="Resources\Consumerism-and-Co-operativ-520x1981.png" />
+    <Content Include="Resources\cross.png" />
+    <None Include="Resources\cross1.png" />
+    <Content Include="Resources\delete.png" />
+    <None Include="Resources\delete1.png" />
+    <Content Include="Resources\DeleteRed.png" />
+    <None Include="Resources\DeleteRed1.png" />
+    <Content Include="Resources\Delivery.png" />
+    <Content Include="Resources\Device-Dont-tell-Bill-icon.png" />
+    <Content Include="Resources\Download-icon.png" />
+    <Content Include="Resources\edit-icon.png" />
+    <Content Include="Resources\edit.png" />
+    <None Include="Resources\edit1.png" />
+    <Content Include="Resources\employee details button.png" />
+    <Content Include="Resources\exit.png" />
+    <Content Include="Resources\exit1.png" />
+    <None Include="Resources\exit11.png" />
+    <Content Include="Resources\fc-edit.png" />
+    <Content Include="Resources\Female-Face-FC-5-icon.png" />
+    <Content Include="Resources\Floppy-Small-icon.png" />
+    <Content Include="Resources\folder-blue-click-icon.png" />
+    <None Include="Resources\Folder-Open-icon2.png" />
+    <Content Include="Resources\footer.png" />
+    <Content Include="Resources\forward-icon.png" />
+    <Content Include="Resources\Fruits-Persimmon-icon.png" />
+    <Content Include="Resources\holiday button.png" />
+    <Content Include="Resources\HOLIDAYS.PNG" />
+    <Content Include="Resources\images %285%29.png" />
+    <Content Include="Resources\images.jpg" />
+    <Content Include="Resources\img1284_size1.png" />
+    <None Include="Resources\j0433057_000.jpg" />
+    <None Include="Resources\j0433057_0001.jpg" />
+    <Content Include="Resources\ktron.png" />
+    <Content Include="Resources\kvirc.png" />
+    <Content Include="Resources\kwalletmanager.png" />
+    <Content Include="Resources\kwikdisk.png" />
+    <None Include="Resources\kwikdisk1.png" />
+    <Content Include="Resources\kwin.png" />
+    <Content Include="Resources\kword.png" />
+    <None Include="Resources\kword1.png" />
+    <Content Include="Resources\kwrite.png" />
+    <None Include="Resources\kwrite1.png" />
+    <Content Include="Resources\kxconfig.png" />
+    <Content Include="Resources\lassist.png" />
+    <Content Include="Resources\lassists.png" />
+    <None Include="Resources\lassists1.png" />
+    <Content Include="Resources\Leather Hole sPlain.png" />
+    <Content Include="Resources\Leather Hole sPlain1.png" />
+    <Content Include="Resources\Leavebooing button.png" />
+    <Content Include="Resources\light-grey-stippled.jpg" />
+    <Content Include="Resources\List manager.png" />
+    <None Include="Resources\List manager1.png" />
+    <Content Include="Resources\lists.png" />
+    <None Include="Resources\lists1.png" />
+    <Content Include="Resources\lock_icon.gif" />
+    <Content Include="Resources\Log-Out-icon.png" />
+    <None Include="Resources\Log-Out-icon1.png" />
+    <Content Include="Resources\login.png" />
+    <Content Include="Resources\login1.png" />
+    <Content Include="Resources\logout-icon.png" />
+    <None Include="Resources\logout-icon1.png" />
+    <Content Include="Resources\looknfeel.png" />
+    <Content Include="Resources\mail_setting.png" />
+    <None Include="Resources\mail_setting1.png" />
+    <Content Include="Resources\Mainfraim.jpg" />
+    <Content Include="Resources\maintenance %281%29.png" />
+    <Content Include="Resources\Male-Face-D2-icon.png" />
+    <Content Include="Resources\man-icon.png" />
+    <Content Include="Resources\MANAGE LEAVE BOOKING.PNG" />
+    <Content Include="Resources\MANAGE USER.PNG" />
+    <Content Include="Resources\member_icon.png" />
+    <Content Include="Resources\messenger.png" />
+    <Content Include="Resources\messenger1.png" />
+    <Content Include="Resources\Misc-Misc-Box-icon.png" />
+    <None Include="Resources\Misc-Misc-Box-icon1.png" />
+    <None Include="Resources\Misc-Misc-Box-icon2.png" />
+    <Content Include="Resources\movie logo.png" />
+    <Content Include="Resources\mozilla-mail.png" />
+    <Content Include="Resources\MS-Word-2-icon1.png" />
+    <Content Include="Resources\mydocuments.png" />
+    <None Include="Resources\mydocuments1.png" />
+    <Content Include="Resources\my_library_logo.png" />
+    <Content Include="Resources\navigate-down-icon.png" />
+    <None Include="Resources\navigate-down-icon1.png" />
+    <Content Include="Resources\navigate-up-icon.png" />
+    <Content Include="Resources\NewNote.png" />
+    <Content Include="Resources\New_User_Icon.png" />
+    <Content Include="Resources\no-image.gif" />
+    <Content Include="Resources\Notepad1.png" />
+    <Content Include="Resources\Ok-icon.png" />
+    <Content Include="Resources\Open.png" />
+    <Content Include="Resources\package_editors.png" />
+    <None Include="Resources\package_editors1.png" />
+    <Content Include="Resources\PAYROLL.PNG" />
+    <Content Include="Resources\RapHeader.png" />
+    <Content Include="Resources\Recycle-Empty-icon.png" />
+    <None Include="Resources\Recycle-Empty-icon1.png" />
+    <Content Include="Resources\red-curtain-background-2497.png" />
+    <Content Include="Resources\register.png" />
+    <Content Include="Resources\Reports button.png" />
+    <None Include="Resources\salary_icon1.png" />
+    <Content Include="Resources\Save-as-icon.png" />
+    <Content Include="Resources\Save-icon.png" />
+    <Content Include="Resources\Save-icon1.png" />
+    <None Include="Resources\Save-icon2.png" />
+    <Content Include="Resources\Save.png" />
+    <Content Include="Resources\select-by-color-icon.png" />
+    <Content Include="Resources\semi-success-icon.png" />
+    <Content Include="Resources\shopping-cart-add-icon.png" />
+    <Content Include="Resources\straight-grey-plain-design_1.jpg" />
+    <Content Include="Resources\task-manager1.png" />
+    <Content Include="Resources\things-icon.png" />
+    <Content Include="Resources\TIMELOG.PNG" />
+    <None Include="Resources\transaction_mgmt_icon1.jpg" />
+    <Content Include="Resources\Upload-icon.png" />
+    <None Include="Resources\url.png" />
+    <Content Include="Resources\user-group-icon.png" />
+    <Content Include="Resources\User3.png" />
+    <None Include="Resources\users.ico" />
+    <Content Include="Resources\videos_4_background.jpg" />
+    <Content Include="Resources\videos_4_background1.jpg" />
+    <Content Include="Resources\vista_login1.jpg" />
+    <Content Include="Resources\vista_login1.png" />
+    <Content Include="Resources\Windows-Magnifier-icon.png" />
+    <Content Include="Resources\Window_Gadgets_Calculator-85693.png" />
+    <Content Include="Resources\Wordpad_icon_%28Windows_7%29.png" />
+    <Content Include="Resources\WORK DETAILS.PNG" />
+    <Content Include="Resources\work details1.png" />
+    <Content Include="Resources\wwww.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PayrollSystem.Data\PayrollSystem.Data.csproj">
+      <Project>{c043672d-f067-4878-8eb4-a0b1f149a5b0}</Project>
+      <Name>PayrollSystem.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PayrollSystem.Entities\PayrollSystem.Entities.csproj">
+      <Project>{dc921f49-e3ad-46d3-8fb7-c56b416c0caa}</Project>
+      <Name>PayrollSystem.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PayrollSystem.Interfaces\PayrollSystem.Interfaces.csproj">
+      <Project>{03e9c76b-6f76-4268-8f7d-51a042cec6ba}</Project>
+      <Name>PayrollSystem.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

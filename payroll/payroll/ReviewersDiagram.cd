@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="payroll.Admin">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DwQCkMQEDECQEBQACAABgIAkQhAkRABR1AQBAgCALgI=</HashCode>
+      <FileName>Class\Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="payroll.AttendanceReport">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAQAAAIAAAAAAAAAAAgAAAAAACAhAAAAAQAgAIAEI=</HashCode>
+      <FileName>Class\AttendanceReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="payroll.Taxs" Collapsed="true">
+    <Position X="12.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgABAAIUAAAAEAgAABAJAAAUAAAAAAgAAAAAA=</HashCode>
+      <FileName>Class\Taxs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="payroll.Attendnces">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAIAAAAKgAAACAACAAABAAAAAQAAAEA=</HashCode>
+      <FileName>Class\Attendances.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="payroll.Counts" Collapsed="true">
+    <Position X="13.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAEAAgABAAAAAAAAAAAA=</HashCode>
+      <FileName>Class\Counts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="payroll.Employee" Collapsed="true">
+    <Position X="12.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAYQAGYkAADidAAoCEURKAgBECKIEgCCgAIBigAAEAo=</HashCode>
+      <FileName>Class\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="payroll.Holidays" Collapsed="true">
+    <Position X="10.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAEgAAAAAAACBAAAAgQAAAAAAAAAAAAIAAAACA=</HashCode>
+      <FileName>Class\Holidays.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="payroll.Leaves" Collapsed="true">
+    <Position X="14.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>YAAAAAAAEAAEABIAACAIAAAgCAAAAAAAAAAAAGAAAAA=</HashCode>
+      <FileName>Class\Leaves.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="payroll.PagIbigs" Collapsed="true">
+    <Position X="10.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAARAABAAAAAQgAAAIIAEQCCAA=</HashCode>
+      <FileName>Class\PagIbigs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="payroll.Payrollsss" Collapsed="true">
+    <Position X="14.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BwYgIgmCIgYBgAIIIQSOiAQACggABgIhIASGxwYIAII=</HashCode>
+      <FileName>Class\Payrollsss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="payroll.Philhealth" Collapsed="true">
+    <Position X="13.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BgAAAAAAAAAAEAAABhAAAAgBAAIAAQgAAAAIAAgAAAI=</HashCode>
+      <FileName>Class\Philhealth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="payroll.SSSS" Collapsed="true">
+    <Position X="10.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgABQCAQAQAgAAAACgAQAAgBAAIQAQAACIACIAgAAEI=</HashCode>
+      <FileName>Class\SSSS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="payroll.Class.Bonus" Collapsed="true">
+    <Position X="14.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAIAACACAABgAABAQAAAQAAAAA=</HashCode>
+      <FileName>Class\Bonus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="payroll.Class.Loan" Collapsed="true">
+    <Position X="13.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAACAAACAIAAAgCAAAACAAAQhgAEEAQAA=</HashCode>
+      <FileName>Class\Loan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="payroll.Class.NoOfLeave" Collapsed="true">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAEAAgAAAAAIAAAECAAABAABAAAIAQAACAA=</HashCode>
+      <FileName>Class\NoOfLeave.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="payroll.Class.Position" Collapsed="true">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAgAAAAAAAAAAAAAACAAAAggAAAIAAAAAA=</HashCode>
+      <FileName>Class\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
